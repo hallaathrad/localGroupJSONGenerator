@@ -1,0 +1,83 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "ecmaFeatures": {
+      "arrowFunctions": true,
+      "blockBindings": true,
+      "classes": true,
+      "defaultParams": true,
+      "destructuring": true,
+      "experimentalObjectRestSpread": true,
+      "forOf": true,
+      "generators": false,
+      "objectLiteralComputedProperties": true,
+      "objectLiteralDuplicateProperties": false,
+      "objectLiteralShorthandMethods": true,
+      "objectLiteralShorthandProperties": true,
+      "superInFunctions": true,
+      "templateStrings": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jquery": true,
+    "mocha": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "globals": {
+    "expect": true,
+    "sinon": true,
+    "__DEV__": true
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y"
+  ],
+  "rules": {
+    "indent": [
+      "error", 2, {
+        "ArrayExpression": "first",
+        "CallExpression": {"arguments": "first"},
+        "FunctionDeclaration": {"parameters": "first"},
+        "FunctionExpression": {"parameters": "first"},
+        "ObjectExpression": "first",
+        "flatTernaryExpressions": true,
+        "MemberExpression": 1,
+        "outerIIFEBody": 1,
+        "SwitchCase": 1,
+        "VariableDeclarator": { "var": 2, "let": 2, "const": 3 }
+      }
+    ],
+    "linebreak-style": [
+      "error", "unix"
+    ],
+    "no-console": "warn",
+    "no-shadow": 2,                  // http://eslint.org/docs/rules/no-shadow
+    "no-shadow-restricted-names": 2, // http://eslint.org/docs/rules/no-shadow-restricted-names
+    "no-undef": 2,                   // http://eslint.org/docs/rules/no-undef
+    "no-unused-vars": [2, {          // http://eslint.org/docs/rules/no-unused-vars
+      "vars": "local",
+      "args": "after-used"
+    }],
+    "no-use-before-define": 2,       // http://eslint.org/docs/rules/no-use-before-define
+    "no-var": 2,                     // http://eslint.org/docs/rules/no-var
+    "prefer-const": 2,               // http://eslint.org/docs/rules/prefer-const
+    "quotes": [
+      "error", "single"
+    ],
+    "react/jsx-uses-vars": 1,
+    "react/prop-types": 1,
+    "semi": [
+      "error", "always"
+    ],
+  }
+}
