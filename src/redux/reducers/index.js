@@ -1,6 +1,9 @@
-import { combineReducers } from 'redux';
-import { localGroupsReducer } from './reducer-localGroups';
+import {combineReducers} from 'redux';
+import {UIReducer} from './reducer-UI';
+import {localGroupsReducer, pendingReducer} from './reducer-localGroups';
 
 export const rootReducer = combineReducers({
-  localGroups: localGroupsReducer
+  UI: UIReducer,
+  localGroups: localGroupsReducer,
+  pending: pendingReducer
 });

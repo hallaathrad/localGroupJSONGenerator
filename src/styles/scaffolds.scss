@@ -1,0 +1,15 @@
+html {
+  font-size: 16px;
+}
+
+details,
+.fields,
+label {
+  display: flex;
+}
+
+.fields,
+label {
+  flex-direction: column;
+  max-width: 20rem;
+}

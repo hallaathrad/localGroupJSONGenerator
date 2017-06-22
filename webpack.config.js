@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpack = require('html-webpack-plugin');
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
 process.traceDeprecation = true;
 module.exports = function(env) {
@@ -16,7 +17,7 @@ module.exports = function(env) {
             'react'
           ],
           plugins: [
-            'transform-object-rest-spread'
+            'transform-object-rest-spread', 'lodash'
           ]
         }
       },  {
@@ -68,6 +69,7 @@ module.exports = function(env) {
         path: path.resolve(__dirname, './dist')
       };
       CONFIG.plugins= [
+        new LodashModuleReplacementPlugin,
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin(),
         new HtmlWebpack({
